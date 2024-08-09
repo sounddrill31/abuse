@@ -4,3 +4,7 @@
 # Ignore various backup files
 *.bak
 *~
+build_emscripten/
+install/
+CMakeFiles/
+CMakeCache.txt

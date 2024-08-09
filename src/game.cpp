@@ -68,6 +68,7 @@
 #include "chat.h"
 #include "demo.h"
 #include "netcfg.h"
+#include <emscripten.h>
 
 #define SHIFT_RIGHT_DEFAULT 0
 #define SHIFT_DOWN_DEFAULT 30
