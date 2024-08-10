@@ -26,7 +26,7 @@
 #include "lisp_gc.h"
 #include "symbols.h"
 
-#include "status.h"
+#include "../imlib/status.h"
 #include "../imlib/specs.h"
 #include "../imlib/dprint.h"
 #include "cache.h"

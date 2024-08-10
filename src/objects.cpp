@@ -22,7 +22,7 @@
 #include "intsect.h"
 #include "ability.h"
 #include "lisp/lisp.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "light.h"
 #include "imlib/dprint.h"
 #include "clisp.h"

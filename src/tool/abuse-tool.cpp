@@ -18,7 +18,7 @@
 #include "common.h"
 #include "../imlib/specs.h"
 #include "../imlib/image.h"
-#include "pcxread.h"
+#include "../imlib/pcxread.h"
 #include "crc.h"
 
 static void Usage();

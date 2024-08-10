@@ -20,7 +20,7 @@
 #include "objects.h"
 #include "level.h"
 #include "game.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "clisp.h"
 
 enum { un_offable };     // vars

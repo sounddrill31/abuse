@@ -32,7 +32,7 @@
 #include "imlib/scroller.h"
 #include "id.h"
 #include "dev.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "imlib/dprint.h"
 #include "transp.h"
 #include "clisp.h"

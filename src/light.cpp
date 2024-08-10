@@ -24,7 +24,7 @@
 #include "imlib/specs.h"
 #include "imlib/dprint.h"
 #include "imlib/filter.h"
-#include "status.h"
+#include "imlib/status.h"
 #include "dev.h"
 
 light_source *first_light_source=NULL;

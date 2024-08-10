@@ -21,7 +21,7 @@
 #include "imlib/jwindow.h"
 #include "imlib/dprint.h"
 #include "dev.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "lisp/lisp.h"
 #include "clisp.h"
 #include "netface.h"

@@ -30,7 +30,7 @@
 #include "filesel.h"
 #include "tools.h"
 #include "game.h"
-#include "pcxread.h"
+#include "imlib/pcxread.h"
 #include "lisp/lisp_gc.h"
 #include "demo.h"
 #include "profile.h"

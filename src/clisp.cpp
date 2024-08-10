@@ -27,9 +27,9 @@
 #include "ant.h"
 #include "lisp/lisp.h"
 #include "game.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "dev.h"
-#include "pcxread.h"
+#include "imlib/pcxread.h"
 #include "menu.h"
 #include "imlib/dprint.h"
 #include "clisp.h"
@@ -40,7 +40,7 @@
 #include "nfserver.h"
 #include "demo.h"
 #include "chat.h"
-#include "jdir.h"
+#include "imlib/jdir.h"
 #include "netcfg.h"
 
 #define ENGINE_MAJOR 1

@@ -21,7 +21,7 @@
 #include "chars.h"
 #include "imlib/specs.h"
 #include "lisp/lisp.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "menu.h"
 #include "dev.h"
 #include "director.h"

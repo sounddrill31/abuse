@@ -28,7 +28,7 @@
 #include "dev.h"
 #include "clisp.h"
 #include "imlib/dprint.h"
-#include "imlib/lisp.h"
+#include "lisp/lisp.h"
 #include "director.h"
 #include "lisp/lisp_gc.h"
 
