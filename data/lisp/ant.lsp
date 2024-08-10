@@ -347,7 +347,7 @@
 
 (defun create_dead_parts (array part_num type)
   (let ((dir  (direction))
-	(rand (rand_on)))
+	(jrand (rand_on)))
     (with_object (add_object (aref array part_num) (x) (y))
 	       (progn (set_aitype type)
 		      (set_xvel (* dir (random 10)))
@@ -374,7 +374,7 @@
 		      (next_picture)
 		      (set_xvel (* dir (random 10)))
 		      (set_yvel (- 0 (random 25)))))
-    (set_rand_on rand)))   ;; restore random table, in case this didn't get called because of frame panic
+    (set_rand_on jrand)))   ;; restore random table, in case this didn't get called because of frame panic
 
 
 (enum 'decay_part

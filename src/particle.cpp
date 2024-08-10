@@ -226,8 +226,8 @@ void ScatterLine(ivec2 p1, ivec2 p2, int c, int s)
     main_screen->Lock();
     while(t--)
     {
-        int x = (xo >> 16) + (rand() >> s) - xm;
-        int y = (yo >> 16) + (rand() >> s) - ym;
+        int x = (xo >> 16) + (jrand() >> s) - xm;
+        int y = (yo >> 16) + (jrand() >> s) - ym;
         if(!(x < caa.x || y < caa.y || x >= cbb.x || y >= cbb.y))
         {
             *(main_screen->scan_line(y) + x) = c;
@@ -260,8 +260,8 @@ void AScatterLine(ivec2 p1, ivec2 p2, int c1, int c2, int s)
 
     while(t--)
     {
-        int x = (xo >> 16) + (rand() >> s) - xm;
-        int y = (yo >> 16) + (rand() >> s) - ym;
+        int x = (xo >> 16) + (jrand() >> s) - xm;
+        int y = (yo >> 16) + (jrand() >> s) - ym;
         // FIXME: these clip values seemed wrong to me before the GetClip
         // refactoring.
         if(!(x <= caa.x || y <= caa.y || x >= cbb.x - 1 || y >= cbb.y - 1))

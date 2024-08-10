@@ -355,11 +355,11 @@
 
 (defun rocket_ai ()
   (if (not (frame_panic))
-      (let ((rand (rand_on)))
+      (let ((jrand (rand_on)))
 	(with_object (add_object SMALL_LIGHT_CLOUD (+ (x) (random 3))
 				 (- (y) (random 3) (/ (picture_height) 2)))
 		     (set_fade_count 11))
-	(set_rand_on rand)))
+	(set_rand_on jrand)))
 
   (if (> (total_objects) 1)  ;; if not attached to object, just fly strait (0 is player)
     (let ((angle (atan2 (- (- (y) (with_object (get_object 1) (y))) -15)
@@ -574,11 +574,11 @@
 
 (defun dfris_ai ()
   (if (and (eq 0 (mod (game_tick) 2)) (not (frame_panic)))
-      (let ((rand (rand_on)))
+      (let ((jrand (rand_on)))
 	(with_object (add_object SMALL_LIGHT_CLOUD (+ (x) (random 3))
 				 (- (y) (random 3) (/ (picture_height) 2)))
 		     (set_fade_count 11))
-	(set_rand_on rand)))
+	(set_rand_on jrand)))
   (set_course (aistate) 12)
   (if (or (not (eq (bmove (if (> (total_objects) 0) (get_object 0) nil)) T))
 	  (< (total_objects) 1)

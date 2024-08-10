@@ -42,6 +42,7 @@
 #include "chat.h"
 #include "imlib/jdir.h"
 #include "netcfg.h"
+#include "imlib/jrand.h"
 
 #define ENGINE_MAJOR 1
 #define ENGINE_MINOR 20

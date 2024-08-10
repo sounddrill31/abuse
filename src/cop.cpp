@@ -454,7 +454,7 @@ static void do_special_power(game_object *o, int xm, int ym, int but, game_objec
   {
     case FLY_POWER :
     {
-      game_object *cloud=create(S_CLOUD,o->x+o->direction*-10,o->y+rand()%5);
+      game_object *cloud=create(S_CLOUD,o->x+o->direction*-10,o->y+jrand()%5);
       if (current_level)
         current_level->add_object(cloud);
       o->set_state(run_jump);
@@ -927,12 +927,12 @@ void *sgun_ai()
            who->get_object(0)->aistate()==0))
   {
     o->lvars[sgb_lifetime]=0;
-    game_object *n=create(S_EXPLODE5,o->x+rand()%4,o->y+rand()%4);
+    game_object *n=create(S_EXPLODE5,o->x+jrand()%4,o->y+jrand()%4);
     current_level->add_object(n);
   } else if (who && figures[who->otype]->get_cflag(CFLAG_HURTABLE))
   {
     o->lvars[sgb_lifetime]=0;
-    game_object *n=create(S_EXPLODE3,o->x+rand()%4,o->y+rand()%4);
+    game_object *n=create(S_EXPLODE3,o->x+jrand()%4,o->y+jrand()%4);
     current_level->add_object(n);
      who->do_damage(5,o,o->x,o->y,(lisp_cos(ang)*10)>>16,(lisp_sin(ang)*10)>>16);
   }
