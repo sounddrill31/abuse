@@ -22,6 +22,7 @@
 #endif
 
 #include "common.h"
+#include "imlib/jrand.h"
 
 #include "game.h"
 
@@ -195,7 +196,7 @@ char const *get_login()
 		return "unknown";
 	}
 #else
-    char const *login = getlogin();
+    char const *login = get_login();
     return login ? login : "unknown";
 #endif
 }

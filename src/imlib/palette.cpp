@@ -14,7 +14,7 @@
 
 #include <math.h>
 
-#include "common.h"
+
 
 #include "palette.h"
 #include "image.h"

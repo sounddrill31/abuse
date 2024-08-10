@@ -22,7 +22,7 @@
 #include <sys/types.h>
 #include <string.h>
 
-#include "common.h"
+
 
 #include "netcfg.h"
 #include "gclient.h"

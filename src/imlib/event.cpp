@@ -22,7 +22,7 @@
 #   include "config.h"
 #endif
 
-#include "common.h"
+#include "../common.h"
 
 #include "event.h"
 #include "video.h"

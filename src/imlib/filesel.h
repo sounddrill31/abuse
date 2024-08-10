@@ -11,7 +11,7 @@
 #ifndef __FSELECT_HPP_
 #define __FSELECT_HPP_
 
-#include "imlib/jwindow.h"
+#include "jwindow.h"
 
 Jwindow *file_dialog(char const *prompt, char const *def,
              int ok_id, char const *ok_name, int cancel_id,

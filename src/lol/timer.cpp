@@ -29,7 +29,7 @@
 #   include "SDL.h"
 #endif
 
-#include "common.h"
+#include "../common.h"
 
 namespace lol
 {

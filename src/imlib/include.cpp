@@ -12,7 +12,7 @@
 #   include "config.h"
 #endif
 
-#include "common.h"
+
 
 #include "include.h"
 #include "ctype.h"

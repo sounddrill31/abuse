@@ -16,7 +16,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-#include "common.h"
+#include "../common.h"
 
 void  (*dprint_fun)(char *) = NULL;
 void  (*dget_fun)(char *,int) = NULL;

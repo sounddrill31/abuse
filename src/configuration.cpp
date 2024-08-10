@@ -19,7 +19,7 @@
 #include "sdlport/joy.h"
 #include "game.h"
 
-#include "keys.h"
+#include "imlib/keys.h"
 #include "lisp/lisp.h"
 #include "imlib/jwindow.h"
 #include "configuration.h"

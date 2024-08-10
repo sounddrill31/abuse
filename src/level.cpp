@@ -24,7 +24,7 @@
 #endif
 
 #include "common.h"
-
+#include "imlib/jrand.h"
 #include "light.h"
 #include "level.h"
 #include "game.h"
@@ -2205,7 +2205,7 @@ int level::save(char const *filename, int save_all)
         bFILE *fp = open_file( name, "rb" );    // does file already exist?
         if( !fp->open_failure() )
         {
-            unlink( bkname );
+            remove( bkname );
             bFILE *bk = open_file( bkname, "wb" );
             if( bk->open_failure() )
                 dprintf("unable to open backup file %s\n", bkname );

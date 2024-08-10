@@ -25,6 +25,7 @@
 #include "lisp/lisp.h"
 #include "clisp.h"
 #include "netface.h"
+#include "imlib/jrand.h"
 
 
 demo_manager demo_man;

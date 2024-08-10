@@ -12,7 +12,7 @@
 #   include "config.h"
 #endif
 
-#include "common.h"
+#include "../common.h"
 
 #include "volumewindow.h" // class VolumeWindow
 #include "property.h"     // class property_manager

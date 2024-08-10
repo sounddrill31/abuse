@@ -24,6 +24,7 @@
 #include "clisp.h"
 #include "ant.h"
 #include "dev.h"
+#include "imlib/jrand.h"
 
 enum { point_angle, fire_delay1 };
 

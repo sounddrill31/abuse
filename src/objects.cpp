@@ -16,6 +16,7 @@
 
 #include "imlib/transimage.h"
 #include "objects.h"
+#include "imlib/jrand.h"
 #include "chars.h"
 
 #include "game.h"

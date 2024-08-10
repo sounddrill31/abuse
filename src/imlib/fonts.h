@@ -20,12 +20,12 @@ public:
     JCFont(image *letters);
     ~JCFont();
 
-    void PutChar(image *screen, ivec2 pos, char ch, int color = -1);
-    void PutString(image *screen, ivec2 pos, char const *st, int color = -1);
-    ivec2 Size() const { return m_size; }
+    void PutChar(image *screen, lol::ivec2 pos, char ch, int color = -1);
+    void PutString(image *screen, lol::ivec2 pos, char const *st, int color = -1);
+    lol::ivec2 Size() const { return m_size; }
 
 private:
-    ivec2 m_size;
+    lol::ivec2 m_size;
     TransImage *m_data[256];
 };
 

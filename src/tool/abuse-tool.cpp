@@ -15,7 +15,7 @@
 #include <cstring>
 #include <cstdio>
 
-#include "common.h"
+#include "../common.h"
 #include "../imlib/specs.h"
 #include "../imlib/image.h"
 #include "../imlib/pcxread.h"

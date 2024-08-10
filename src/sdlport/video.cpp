@@ -24,7 +24,7 @@
 
 #include "SDL.h"
 
-#include "common.h"
+#include "../common.h"
 
 #include "../imlib/filter.h"
 #include "../imlib/video.h"

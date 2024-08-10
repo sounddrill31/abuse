@@ -33,7 +33,7 @@
 #define O_BINARY 0
 #endif
 
-#include "common.h"
+
 
 #include "image.h"
 #include "palette.h"

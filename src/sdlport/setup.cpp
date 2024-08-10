@@ -39,7 +39,7 @@
 #include "SDL.h"
 
 #include "../imlib/specs.h"
-#include "keys.h"
+#include "../imlib/keys.h"
 #include "setup.h"
 #include "errorui.h"
 

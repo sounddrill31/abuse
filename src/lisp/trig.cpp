@@ -12,7 +12,7 @@
 #   include "config.h"
 #endif
 
-#include "common.h"
+#include "../common.h"
 
 /* Python code to generate the tables:
  *  import math

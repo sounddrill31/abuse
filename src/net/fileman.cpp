@@ -27,7 +27,7 @@
 # include <io.h>
 #endif
 
-#include "common.h"
+#include "../common.h"
 
 #include "fileman.h"
 #include "netface.h"

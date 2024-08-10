@@ -8,7 +8,7 @@
  *  Jonathan Clark, or by Sam Hocevar.
  */
 
-#include "dev.h"
+#include "../dev.h"
 
 class VolumeWindow : public Jwindow
 {

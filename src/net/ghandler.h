@@ -1,7 +1,7 @@
 #ifndef __GHANDLER_HPP_
 #define __GHANDLER_HPP_
 
-#include "netface.h"
+#include "../netface.h"
 
 
 #define DEFAULT_COMM_PORT 20202

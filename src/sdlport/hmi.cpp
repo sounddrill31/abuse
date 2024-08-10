@@ -16,7 +16,7 @@
 #include <cstdlib>
 #include <cstdio>
 
-#include "common.h"
+#include "../common.h"
 
 // Load Abuse HMI files and covert them to standard Midi format
 //

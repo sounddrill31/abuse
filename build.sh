@@ -20,6 +20,6 @@ echo "Compiling to JavaScript..."
 #emcc -o abuse.html ../src/game.cpp \
 #    -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s USE_SDL_MIXER=2 -s WASM=1 -s ALLOW_MEMORY_GROWTH=1
 
- emcc ../src/*.cpp ../src/*/*.cpp -o test.html -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 -s USE_FREETYPE=1 -s USE_SDL_MIXER=2 -s USE_OGG=1
+ emcc ../src/*.cpp ../src/*/*.cpp -o test.html -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 -s USE_FREETYPE=1 -s USE_SDL_MIXER=2 -s USE_OGG=1 -std=c++14
 
 echo "Compilation complete."

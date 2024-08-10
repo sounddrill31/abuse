@@ -20,7 +20,7 @@
 
 #include "game.h"
 
-#include "linked.h"
+#include "imlib/linked.h"
 #include "console.h"
 
 void console::put_string(char const *st)

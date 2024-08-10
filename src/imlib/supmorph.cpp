@@ -12,7 +12,7 @@
 #   include "config.h"
 #endif
 
-#include "common.h"
+
 
 #include "supmorph.h"
 #include "specs.h"

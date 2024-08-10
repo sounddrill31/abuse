@@ -12,7 +12,7 @@
 #   include "config.h"
 #endif
 
-#include "common.h"
+
 
 #include "scroller.h"
 #define HS_ICON_W 10

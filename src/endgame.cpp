@@ -19,6 +19,7 @@
 #include "menu.h"
 #include "lisp/lisp.h"
 #include "game.h"
+#include "imlib/jrand.h"
 #include "imlib/timing.h"
 #include "game.h"
 #include "id.h"

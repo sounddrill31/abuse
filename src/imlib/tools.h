@@ -11,7 +11,7 @@
 #ifndef __TOOLS_HPP_
 #define __TOOLS_HPP_
 
-#include "imlib/jwindow.h"
+#include "jwindow.h"
 #include "input.h"
 #include "specs.h"
 #include "scroller.h"

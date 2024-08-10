@@ -24,7 +24,7 @@
 
 #include "SDL.h"
 
-#include "common.h"
+#include "../common.h"
 
 #include "../imlib/image.h"
 #include "../imlib/palette.h"

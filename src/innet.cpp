@@ -593,7 +593,7 @@ void net_reload()
 
       } while (!reload_end());
       wm->close_window(j);
-      unlink(NET_STARTFILE);
+      remove(NET_STARTFILE);
 
       the_game->reset_keymap();
 

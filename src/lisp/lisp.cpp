@@ -18,7 +18,7 @@
 #include <string.h>
 #include <stdarg.h>
 
-#include "common.h"
+#include "../common.h"
 
 #define TYPE_CHECKING 1
 

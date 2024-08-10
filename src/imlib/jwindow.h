@@ -65,7 +65,7 @@ public :
     virtual ~ifield();
 
     virtual void set_owner(Jwindow *owner);
-    virtual void Move(ivec2 pos) { m_pos = pos; }
+    virtual void Move(lol::ivec2 pos) { m_pos = pos; }
     virtual void area(int &x1, int &y1, int &x2, int &y2) = 0;
     virtual void draw_first(image *screen) = 0;
     virtual void draw(int active, image *screen) = 0;
@@ -76,7 +76,7 @@ public :
     virtual ifield *find(int search_id) { if (id==search_id) return this; else return NULL; }
     virtual ifield *unlink(int id) { (void)id; return NULL; }
 
-    ivec2 m_pos;
+    lol::ivec2 m_pos;
     int id;
     ifield *next;
 
@@ -95,13 +95,13 @@ public:
     void *local_info;  // pointer to info block for local system (may support windows)
 
     Jwindow(char const *name = NULL);
-    Jwindow(ivec2 pos, ivec2 size, ifield *f, char const *name = NULL);
+    Jwindow(lol::ivec2 pos, lol::ivec2 size, ifield *f, char const *name = NULL);
     ~Jwindow();
 
     virtual void redraw();
-    void Resize(ivec2 size);
-    void clear(int color = 0) { m_surf->Bar(ivec2(x1(), y1()),
-                                            ivec2(x2(), y2()), color); }
+    void Resize(lol::ivec2 size);
+    void clear(int color = 0) { m_surf->Bar(lol::ivec2(x1(), y1()),
+                                            lol::ivec2(x2(), y2()), color); }
     void show() { _hidden = false; }
     void hide() { _hidden = true; }
     bool is_hidden() { return _hidden; }
@@ -112,8 +112,8 @@ public:
     int y1() { return _y1; }
     int x2() { return _x2; }
     int y2() { return _y2; }
-    void clip_in() { m_surf->SetClip(ivec2(x1(), y1()), ivec2(x2() + 1, y2() + 1)); }
-    void clip_out() { m_surf->SetClip(ivec2(0), m_size); }
+    void clip_in() { m_surf->SetClip(lol::ivec2(x1(), y1()), lol::ivec2(x2() + 1, y2() + 1)); }
+    void clip_out() { m_surf->SetClip(lol::ivec2(0), m_size); }
     char *read(int id) { return inm->get(id)->read(); }
     void local_close();
 
@@ -122,7 +122,7 @@ public:
     static int top_border();
     static int bottom_border();
 
-    ivec2 m_pos, m_size;
+    lol::ivec2 m_pos, m_size;
     image *m_surf;
 
 protected:
@@ -158,7 +158,7 @@ public:
     Jwindow *drag_window;
     JCFont *fnt, *wframe_fnt;
 
-    Jwindow *CreateWindow(ivec2 pos, ivec2 size,
+    Jwindow *CreateWindow(lol::ivec2 pos, lol::ivec2 size,
                           ifield *fields = NULL, char const *Name = NULL);
 
     JCFont *frame_font() { return wframe_fnt; }
