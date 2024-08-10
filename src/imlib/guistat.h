@@ -11,7 +11,7 @@
 #ifndef __GU_STAT_HPP
 #define __GU_STAT_HPP
 #include "status.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 #include <string.h>
 
 class gui_status_node;

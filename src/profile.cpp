@@ -17,7 +17,7 @@
 #include "game.h"
 
 #include "profile.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 #include "property.h"
 #include "objects.h"
 

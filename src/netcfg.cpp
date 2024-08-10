@@ -17,7 +17,7 @@
 #include "game.h"
 
 #include "netcfg.h"
-#include "input.h"
+#include "imlib/input.h"
 #include "cache.h"
 #include "timing.h"
 #include "light.h"

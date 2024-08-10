@@ -10,7 +10,7 @@
 
 #ifndef __GUI_HPP_
 #define __GUI_HPP_
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 
 
 class ico_button : public ifield

@@ -23,7 +23,7 @@
 
 #include "cache.h"
 #include "lisp.h"
-#include "video.h"
+#include "imlib/video.h"
 #include "dprint.h"
 #include "lcache.h"
 #include "status.h"

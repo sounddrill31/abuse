@@ -21,7 +21,7 @@
 
 #include "keys.h"
 #include "lisp.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 #include "configuration.h"
 
 extern int get_key_binding(char const *dir, int i);

@@ -11,8 +11,8 @@
 #ifndef __PARTICLE_HPP_
 #define __PARTICLE_HPP_
 
-#include "specs.h"
-#include "image.h"
+#include "imlib/specs.h"
+#include "imlib/image.h"
 
 class view;
 

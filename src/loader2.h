@@ -14,7 +14,7 @@
 #include "lisp/lisp.h"
 #include "sdlport/sound.h"
 
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 class property_manager;
 extern property_manager *prop;
 

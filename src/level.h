@@ -12,7 +12,7 @@
 #ifndef __LEVEL_HPP_
 #define __LEVEL_HPP_
 
-#include "specs.h"
+#include "imlib/specs.h"
 #include "objects.h"
 #include "view.h"
 #include "id.h"

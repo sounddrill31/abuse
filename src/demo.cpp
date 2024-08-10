@@ -17,8 +17,8 @@
 #include "game.h"
 
 #include "demo.h"
-#include "specs.h"
-#include "jwindow.h"
+#include "imlib/specs.h"
+#include "imlib/jwindow.h"
 #include "dprint.h"
 #include "dev.h"
 #include "jrand.h"

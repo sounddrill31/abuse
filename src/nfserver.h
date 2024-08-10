@@ -11,7 +11,7 @@
 #ifndef __NFSERVER_HPP_
 #define __NFSERVER_HPP_
 
-#include "specs.h"
+#include "imlib/specs.h"
 #include "netface.h"
 #include "net/sock.h"
 

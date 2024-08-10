@@ -29,8 +29,8 @@
 #include "timing.h"
 #include "netcfg.h"
 #include "id.h"
-#include "jwindow.h"
-#include "input.h"
+#include "../imlib/jwindow.h"
+#include "../imlib/input.h"
 #include "dev.h"
 #include "game.h"
 

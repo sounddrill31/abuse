@@ -11,8 +11,8 @@
 #ifndef LIGHT_HPP
 #define LIGHT_HPP
 
-#include "image.h"
-#include "palette.h"
+#include "imlib/image.h"
+#include "imlib/palette.h"
 #include "configuration.h"
 #include "crc.h"
 

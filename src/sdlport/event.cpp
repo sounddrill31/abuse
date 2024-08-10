@@ -26,10 +26,10 @@
 
 #include "common.h"
 
-#include "image.h"
-#include "palette.h"
-#include "video.h"
-#include "event.h"
+#include "../imlib/image.h"
+#include "../imlib/palette.h"
+#include "../imlib/video.h"
+#include "../imlib/event.h"
 #include "timing.h"
 #include "sprite.h"
 #include "game.h"

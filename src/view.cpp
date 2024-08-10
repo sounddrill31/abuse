@@ -27,7 +27,7 @@
 
 #include "view.h"
 #include "lisp.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 #include "configuration.h"
 #include "scroller.h"
 #include "id.h"

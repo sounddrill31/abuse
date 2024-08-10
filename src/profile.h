@@ -11,7 +11,7 @@
 #ifndef __JPROF_HPP_
 #define __JPROF_HPP_
 
-#include "event.h"
+#include "imlib/event.h"
 
 void profile_init();
 void profile_reset();

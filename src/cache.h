@@ -16,7 +16,7 @@
 #include "lisp/lisp.h"
 #include "sdlport/sound.h"
 
-#include "specs.h"
+#include "imlib/specs.h"
 #include "items.h"
 #include "particle.h"
 

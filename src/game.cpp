@@ -51,7 +51,7 @@
 #include "scroller.h"
 #include "dprint.h"
 #include "nfserver.h"
-#include "video.h"
+#include "imlib/video.h"
 #include "transp.h"
 #include "clisp.h"
 #include "guistat.h"

@@ -25,7 +25,7 @@
 
 #include "netface.h"
 
-#include "specs.h"
+#include "imlib/specs.h"
 #include "nfserver.h"
 #include "dprint.h"
 #include "crc.h"

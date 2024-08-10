@@ -10,7 +10,7 @@
 
 #ifndef __CONSOLE_HPP_
 #define __CONSOLE_HPP_
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 
 class console
 {

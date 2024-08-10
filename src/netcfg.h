@@ -11,7 +11,7 @@
 #ifndef __NETCFG_HPP_
 #define __NETCFG_HPP_
 
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 
 class net_configuration
 {

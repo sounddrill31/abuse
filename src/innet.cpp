@@ -17,7 +17,7 @@
 #include "common.h"
 
 #include "demo.h"
-#include "specs.h"
+#include "imlib/specs.h"
 #include "level.h"
 #include "game.h"
 #include "dev.h"

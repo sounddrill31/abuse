@@ -18,11 +18,11 @@
 
 #include "game.h"
 
-#include "specs.h"
-#include "jwindow.h"
+#include "imlib/specs.h"
+#include "imlib/jwindow.h"
 #include "id.h"
-#include "input.h"
-#include "fonts.h"
+#include "imlib/input.h"
+#include "imlib/fonts.h"
 #include "lisp.h"
 #include "dprint.h"
 #include "cache.h"

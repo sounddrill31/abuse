@@ -17,13 +17,13 @@
 #include "common.h"
 
 #include "light.h"
-#include "image.h"
-#include "video.h"
-#include "palette.h"
+#include "imlib/image.h"
+#include "imlib/video.h"
+#include "imlib/palette.h"
 #include "timing.h"
-#include "specs.h"
+#include "imlib/specs.h"
 #include "dprint.h"
-#include "filter.h"
+#include "imlib/filter.h"
 #include "status.h"
 #include "dev.h"
 

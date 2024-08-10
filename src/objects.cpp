@@ -14,7 +14,7 @@
 
 #include "common.h"
 
-#include "transimage.h"
+#include "imlib/transimage.h"
 #include "objects.h"
 #include "chars.h"
 

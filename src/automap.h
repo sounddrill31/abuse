@@ -11,7 +11,7 @@
 #ifndef __AUTOMAP_HPP_
 #define __AUTOMAP_HPP_
 
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 #include "level.h"
 
 class automap

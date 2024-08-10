@@ -27,7 +27,7 @@
 #include "symbols.h"
 
 #include "status.h"
-#include "specs.h"
+#include "../imlib/specs.h"
 #include "dprint.h"
 #include "cache.h"
 #include "dev.h"

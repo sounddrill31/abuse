@@ -10,7 +10,7 @@
 
 #ifndef __INPUT_HPP_
 #define __INPUT_HPP_
-#include "jwindow.h"
+#include "../imlib/jwindow.h"
 #include "filter.h"
 
 extern WindowManager *wm; /* FIXME: get rid of this if possible */

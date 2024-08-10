@@ -11,7 +11,7 @@
 #ifndef __HELP_HPP_
 #define __HELP_HPP_
 
-#include "event.h"
+#include "imlib/event.h"
 
 extern int total_help_screens;
 extern int *help_screens;

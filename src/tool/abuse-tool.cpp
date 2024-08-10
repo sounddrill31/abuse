@@ -16,8 +16,8 @@
 #include <cstdio>
 
 #include "common.h"
-#include "specs.h"
-#include "image.h"
+#include "../imlib/specs.h"
+#include "../imlib/image.h"
 #include "pcxread.h"
 #include "crc.h"
 

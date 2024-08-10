@@ -16,7 +16,7 @@
 #include "seq.h"
 //#include "sound.h"
 #include "ability.h"
-#include "event.h"
+#include "imlib/event.h"
 #include <stdarg.h>
 #include <time.h>
 

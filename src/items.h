@@ -10,9 +10,9 @@
 
 #ifndef __ITEMS_HPP__
 #define __ITEMS_HPP__
-#include "image.h"
-#include "transimage.h"
-#include "specs.h"
+#include "imlib/image.h"
+#include "imlib/transimage.h"
+#include "imlib/specs.h"
 #include "points.h"
 #include <stdio.h>
 #include <stdlib.h>

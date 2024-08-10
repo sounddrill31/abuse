@@ -21,7 +21,7 @@
 #include "input.h"
 #include "event.h"
 #include "filter.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 
 static int jw_left = 3, jw_right = 3, jw_top = 2, jw_bottom = 3;
 

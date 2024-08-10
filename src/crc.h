@@ -11,7 +11,7 @@
 #ifndef _CRC_HPP_
 #define _CRC_HPP_
 
-#include "specs.h"
+#include "imlib/specs.h"
 
 uint16_t calc_crc(void *buf, size_t len);
 uint32_t crc_file(bFILE *fp);

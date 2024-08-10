@@ -18,7 +18,7 @@
 
 #include "game.h"
 
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 #include "lisp.h"
 #include "scroller.h"
 #include "id.h"

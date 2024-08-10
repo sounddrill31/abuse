@@ -18,7 +18,7 @@
 #include "common.h"
 
 #include "dev.h"
-#include "input.h"
+#include "imlib/input.h"
 #include "objects.h"
 #include "id.h"
 #include "lisp.h"

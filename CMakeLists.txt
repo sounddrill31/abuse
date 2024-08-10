@@ -9,6 +9,22 @@ set(abuse_VERSION_TWEAK 0)
 
 # Detect the platform, as there's quite a bit of platform variation
 
+if(EMSCRIPTEN)
+  set(USE_SDL2 ON)
+  set(USE_SDL2_MIXER ON)
+  set(CMAKE_EXECUTABLE_SUFFIX ".html")
+  
+  # Add Emscripten-specific SDL2 and SDL2_mixer configuration
+  set(SDL2_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/system/include/SDL2")
+  set(SDL2_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2.a")
+  set(SDL2_MIXER_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/system/include/SDL2")
+  set(SDL2_MIXER_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2_mixer.a")
+  
+  # Add Emscripten-specific compiler flags
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL=2")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL_MIXER=2")
+endif()
+
 if (WIN32)
     # TODO: Think about Win64
     enable_language(RC)
@@ -20,8 +36,8 @@ if (VCPKG_TARGET_TRIPLET)
     find_package(SDL2_mixer CONFIG REQUIRED)
 else()
     list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
-    find_package(SDL2 2.0.0 REQUIRED)
-    find_package(SDL2_mixer 2.0.0 REQUIRED)
+    find_package(SDL2 REQUIRED)
+    find_package(SDL2_mixer REQUIRED)
     # For compatibility with vcpkg, configure SDL2_mixer as an imported shared library
     add_library(SDL2_mixer::SDL2_mixer SHARED IMPORTED)
     set_property(TARGET SDL2_mixer::SDL2_mixer PROPERTY IMPORTED_LOCATION "${SDL2_MIXER_LIBRARY}")

@@ -15,7 +15,7 @@
 class view;
 
 #define TOTAL_WEAPONS 8
-#include "image.h"
+#include "imlib/image.h"
 
 class status_bar
 {

@@ -12,7 +12,7 @@
 #define __DEMO_HPP_
 
 #include "lisp.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 
 class demo_manager
 {

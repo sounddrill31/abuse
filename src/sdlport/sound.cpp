@@ -32,7 +32,7 @@
 
 #include "sound.h"
 #include "hmi.h"
-#include "specs.h"
+#include "../imlib/specs.h"
 #include "setup.h"
 
 extern flags_struct flags;

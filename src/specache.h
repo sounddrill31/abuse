@@ -11,7 +11,7 @@
 #ifndef __SPECACHE_HPP_
 #define __SPECACHE_HPP_
 
-#include "specs.h"
+#include "imlib/specs.h"
 
 #include <string.h>
 

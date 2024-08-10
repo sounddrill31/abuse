@@ -19,7 +19,7 @@
 #include "timing.h"
 #include "loader2.h"
 #include "chars.h"
-#include "specs.h"
+#include "imlib/specs.h"
 #include "lisp.h"
 #include "jrand.h"
 #include "menu.h"

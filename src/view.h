@@ -12,7 +12,7 @@
 #define _VIEW_HPP_
 
 #include "light.h"
-#include "jwindow.h"
+#include "imlib/jwindow.h"
 
 
 class object_node;

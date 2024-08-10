@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "specs.h"
+#include "imlib/specs.h"
 
 class point_list
 {

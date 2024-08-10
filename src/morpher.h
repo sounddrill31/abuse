@@ -10,7 +10,7 @@
 
 #ifndef __MORPHER_HPP_
 #define __MORPHER_HPP_
-#include "supmorph.h"
+#include "imlib/supmorph.h"
 #include "configuration.h"
 
 extern int morph_detail;

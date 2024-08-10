@@ -26,9 +26,9 @@
 
 #include "common.h"
 
-#include "filter.h"
-#include "video.h"
-#include "image.h"
+#include "../imlib/filter.h"
+#include "../imlib/video.h"
+#include "../imlib/image.h"
 #include "setup.h"
 #include "errorui.h"
 

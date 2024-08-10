@@ -13,7 +13,7 @@
 
 #include "image.h"
 #include "palette.h"
-#include "specs.h"
+#include "../imlib/specs.h"
 
 class Filter
 {
