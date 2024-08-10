@@ -15,7 +15,7 @@
 #include <cstdlib> /* free() */
 #include <cstring> /* strdup() */
 
-#include "lol/matrix.h"
+#include "matrix.h"
 
 using namespace std;
 

@@ -17,6 +17,7 @@
 #include <stdint.h>
 #include <ctype.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <math.h>
 #if defined HAVE_UNISTD_H
 # include <unistd.h>

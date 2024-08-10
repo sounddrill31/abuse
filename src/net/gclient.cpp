@@ -24,9 +24,9 @@
 
 
 
-#include "netcfg.h"
+#include "../netcfg.h"
 #include "gclient.h"
-#include "netface.h"
+#include "../netface.h"
 #include "undrv.h"
 #include "../imlib/timing.h"
 

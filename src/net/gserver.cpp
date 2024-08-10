@@ -25,14 +25,14 @@
 
 
 #include "gserver.h"
-#include "netface.h"
+#include "../netface.h"
 #include "../imlib/timing.h"
-#include "netcfg.h"
-#include "id.h"
+#include "../netcfg.h"
+#include "../id.h"
 #include "../imlib/jwindow.h"
 #include "../imlib/input.h"
-#include "dev.h"
-#include "game.h"
+#include "../dev.h"
+#include "../game.h"
 
 extern base_memory_struct *base;
 extern net_socket *comm_sock,*game_sock;

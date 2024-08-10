@@ -31,8 +31,8 @@
 #include "../imlib/video.h"
 #include "../imlib/event.h"
 #include "../imlib/timing.h"
-#include "sprite.h"
-#include "game.h"
+#include "../imlib/sprite.h"
+#include "../game.h"
 #include "setup.h"
 
 extern SDL_Window *window;

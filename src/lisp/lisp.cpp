@@ -29,8 +29,8 @@
 #include "../imlib/status.h"
 #include "../imlib/specs.h"
 #include "../imlib/dprint.h"
-#include "cache.h"
-#include "dev.h"
+#include "../cache.h"
+#include "../dev.h"
 
 /* To bypass the whole garbage collection issue of lisp I am going to have
  * separate spaces where lisp objects can reside.  Compiled code and gloabal
