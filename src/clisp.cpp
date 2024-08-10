@@ -21,7 +21,7 @@
 #endif
 
 #include "common.h"
-
+#include <unistd.h>
 #include "sdlport/joy.h"
 
 #include "ant.h"
