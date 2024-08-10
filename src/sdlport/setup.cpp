@@ -374,6 +374,7 @@ void setup( int argc, char **argv )
     scale                    = 2;    // Default scale amount
 
     // Display our name and version
+    char PACKAGE_VERSION[4] = "0.9"; // Hack: Hardcode version
     printf( "%s %s\n", PACKAGE_NAME, PACKAGE_VERSION );
 
     // Initialize SDL with video and audio support

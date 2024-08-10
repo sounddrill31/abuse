@@ -1307,7 +1307,7 @@ Game::Game(int argc, char **argv)
     // Clean up that old crap
     char *fastpath = (char *)malloc(strlen(get_save_filename_prefix()) + 13);
     sprintf(fastpath, "%sfastload.dat", get_save_filename_prefix());
-    unlink(fastpath);
+    remove(fastpath);
     free(fastpath);
 
 //    ProfilerInit(collectDetailed, bestTimeBase, 2000, 200); //prof
@@ -2160,6 +2160,7 @@ void game_getter(char *st, int max)
 
 void show_startup()
 {
+    char PACKAGE_VERSION[4] = "0.9"; // Hack: Hardcode version
     dprintf("Abuse version %s\n", PACKAGE_VERSION);
 }
 
