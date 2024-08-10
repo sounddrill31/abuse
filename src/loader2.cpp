@@ -16,19 +16,19 @@
 
 #include "common.h"
 
-#include "timing.h"
+#include "imlib/timing.h"
 #include "loader2.h"
 #include "chars.h"
 #include "imlib/specs.h"
-#include "lisp.h"
-#include "jrand.h"
+#include "lisp/lisp.h"
+#include "imlib/lisp.h"
 #include "menu.h"
 #include "dev.h"
 #include "director.h"
 
 #include "dev.h"
 #include "light.h"
-#include "dprint.h"
+#include "imlib/dprint.h"
 #include "particle.h"
 #include "clisp.h"
 #include "compiled.h"

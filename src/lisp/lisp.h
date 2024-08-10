@@ -15,7 +15,7 @@
 #include <stdint.h>
 
 #ifdef L_PROFILE
-#include "timing.h"
+#include "../imlib/timing.h"
 #endif
 
 #define Cell void

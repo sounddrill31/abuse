@@ -11,7 +11,7 @@
 #ifndef VIS_OBJECT_HPP
 #define VIS_OBJECT_HPP
 
-#include "imlib/jwindow.h"
+#include "jwindow.h"
 #include "filter.h"
 
 class visual_object

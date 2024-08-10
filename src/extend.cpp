@@ -17,7 +17,7 @@
 #include "extend.h"
 #include "view.h"
 #include "objects.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 
 /*
 

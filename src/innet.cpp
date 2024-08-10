@@ -21,7 +21,7 @@
 #include "level.h"
 #include "game.h"
 #include "dev.h"
-#include "timing.h"
+#include "imlib/timing.h"
 #include "netface.h"
 
 #if HAVE_NETWORK
@@ -31,7 +31,7 @@
 #include "net/ghandler.h"
 #include "net/gserver.h"
 #include "net/gclient.h"
-#include "dprint.h"
+#include "imlib/dprint.h"
 #include "netcfg.h"
 
 /*

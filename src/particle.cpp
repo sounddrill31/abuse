@@ -16,9 +16,9 @@
 
 #include "particle.h"
 #include "view.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 #include "cache.h"
-#include "jrand.h"
+#include "imlib/lisp.h"
 
 
 static int total_pseqs=0;

@@ -11,7 +11,7 @@
 #ifndef __DIRECTOR_HPP_
 #define __DIRECTOR_HPP_
 
-#include "timing.h"
+#include "imlib/timing.h"
 
 class director        // the director controlls the scene
 {

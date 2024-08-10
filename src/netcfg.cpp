@@ -19,7 +19,7 @@
 #include "netcfg.h"
 #include "imlib/input.h"
 #include "cache.h"
-#include "timing.h"
+#include "imlib/timing.h"
 #include "light.h"
 
 #include "dev.h"

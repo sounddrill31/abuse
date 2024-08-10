@@ -15,7 +15,7 @@
 #include "common.h"
 
 #include "devsel.h"
-#include "scroller.h"
+#include "imlib/scroller.h"
 #include "cache.h"
 #include "game.h"
 

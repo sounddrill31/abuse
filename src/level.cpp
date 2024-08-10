@@ -29,11 +29,11 @@
 #include "level.h"
 #include "game.h"
 #include "intsect.h"
-#include "lisp.h"
-#include "dprint.h"
+#include "lisp/lisp.h"
+#include "imlib/dprint.h"
 #include "particle.h"
 #include "objects.h"
-#include "jrand.h"
+#include "imlib/lisp.h"
 #include "clisp.h"
 #include "status.h"
 #include "dev.h"
@@ -43,7 +43,7 @@
 #include "sbar.h"
 #include "cop.h"
 #include "nfserver.h"
-#include "lisp_gc.h"
+#include "lisp/lisp_gc.h"
 
 level *current_level;
 

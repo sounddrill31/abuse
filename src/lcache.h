@@ -10,7 +10,7 @@
 
 #ifndef __LCACHE_HPP_
 #define __LCACHE_HPP_
-#include "lisp.h"
+#include "lisp/lisp.h"
 
 // return number of bytes to save this block of code
 size_t block_size(LObject *level);

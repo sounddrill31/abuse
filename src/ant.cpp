@@ -17,13 +17,13 @@
 #include "common.h"
 
 #include "ant.h"
-#include "lisp.h"
-#include "lisp_gc.h"
+#include "lisp/lisp.h"
+#include "lisp/lisp_gc.h"
 #include "compiled.h"
 #include "objects.h"
 #include "level.h"
 #include "game.h"
-#include "jrand.h"
+#include "imlib/lisp.h"
 #include "clisp.h"
 #include "dev.h"
 

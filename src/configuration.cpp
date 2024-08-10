@@ -20,7 +20,7 @@
 #include "game.h"
 
 #include "keys.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 #include "imlib/jwindow.h"
 #include "configuration.h"
 

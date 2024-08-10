@@ -26,7 +26,7 @@
 
 #include "gserver.h"
 #include "netface.h"
-#include "timing.h"
+#include "../imlib/timing.h"
 #include "netcfg.h"
 #include "id.h"
 #include "../imlib/jwindow.h"

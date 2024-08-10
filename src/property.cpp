@@ -18,7 +18,7 @@
 #include "common.h"
 
 #include "property.h"
-#include "dprint.h"
+#include "imlib/dprint.h"
 #include "game.h"
 
 class property

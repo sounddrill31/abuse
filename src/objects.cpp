@@ -21,12 +21,12 @@
 #include "game.h"
 #include "intsect.h"
 #include "ability.h"
-#include "lisp.h"
-#include "jrand.h"
+#include "lisp/lisp.h"
+#include "imlib/lisp.h"
 #include "light.h"
-#include "dprint.h"
+#include "imlib/dprint.h"
 #include "clisp.h"
-#include "lisp_gc.h"
+#include "lisp/lisp_gc.h"
 #include "profile.h"
 
 char **object_names;

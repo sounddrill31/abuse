@@ -16,7 +16,7 @@
 
 #include "sbar.h"
 #include "view.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 #include "cache.h"
 #include "demo.h"
 #include "chars.h"

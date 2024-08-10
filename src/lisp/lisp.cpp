@@ -28,7 +28,7 @@
 
 #include "status.h"
 #include "../imlib/specs.h"
-#include "dprint.h"
+#include "../imlib/dprint.h"
 #include "cache.h"
 #include "dev.h"
 

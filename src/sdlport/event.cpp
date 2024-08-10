@@ -30,7 +30,7 @@
 #include "../imlib/palette.h"
 #include "../imlib/video.h"
 #include "../imlib/event.h"
-#include "timing.h"
+#include "../imlib/timing.h"
 #include "sprite.h"
 #include "game.h"
 #include "setup.h"

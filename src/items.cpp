@@ -15,7 +15,7 @@
 #include "common.h"
 
 #include "items.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 #include "dev.h"
 
 

@@ -14,7 +14,7 @@
 #include "game.h"
 #include "light.h"
 #include "console.h"
-#include "timing.h"
+#include "imlib/timing.h"
 
 /* Cleaned-up externs */
 extern int confirm_quit();

@@ -17,20 +17,20 @@
 #include "common.h"
 
 #include "menu.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 #include "game.h"
-#include "timing.h"
+#include "imlib/timing.h"
 #include "game.h"
 #include "id.h"
-#include "pmenu.h"
+#include "imlib/pmenu.h"
 #include "gui.h"
 #include "property.h"
 #include "dev.h"
 #include "clisp.h"
-#include "dprint.h"
-#include "jrand.h"
+#include "imlib/dprint.h"
+#include "imlib/lisp.h"
 #include "director.h"
-#include "lisp_gc.h"
+#include "lisp/lisp_gc.h"
 
 extern palette *old_pal;
 

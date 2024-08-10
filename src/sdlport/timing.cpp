@@ -33,7 +33,7 @@
 # include <time.h>
 #endif
 
-#include "timing.h"
+#include "../imlib/timing.h"
 
 #ifdef __APPLE__
 // OSX 10.1 has nanosleep but no header for it!

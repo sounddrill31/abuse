@@ -15,7 +15,7 @@
 #include "common.h"
 
 #include "seq.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 
 size_t sequence::MemUsage()
 {

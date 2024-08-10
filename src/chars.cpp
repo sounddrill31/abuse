@@ -17,13 +17,13 @@
 #include "chars.h"
 #include "game.h"
 #include "intsect.h"
-#include "lisp.h"
+#include "lisp/lisp.h"
 #include "imlib/jwindow.h"
 #include "imlib/input.h"
 #include "id.h"
 #include "clisp.h"
-#include "dprint.h"
-#include "lisp_gc.h"
+#include "imlib/dprint.h"
+#include "lisp/lisp_gc.h"
 
 #define FADING_FRAMES 26
 #define FADING_MAX 32
