@@ -32,6 +32,7 @@
 
 #include "keys.h"
 #include "sprite.h"
+#include "../common.h"
 
 class Jwindow;
 

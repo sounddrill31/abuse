@@ -16,6 +16,8 @@
 #include "palette.h"
 #include "specs.h"
 #include "../lol/matrix.h"
+
+#include "../common.h"
 #define MAX_DIRTY 200
 
 void image_init();

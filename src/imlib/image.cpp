@@ -15,7 +15,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-
+#include "../common.h"
 
 #include "image.h"
 

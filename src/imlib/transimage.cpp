@@ -15,7 +15,7 @@
 #include <cstdio>
 #include <cstring>
 
-
+#include "../common.h"
 
 #include "transimage.h"
 
