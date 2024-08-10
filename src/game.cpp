@@ -902,7 +902,7 @@ void Game::draw_map(view *v, int interpolate)
       }
     }
   }
-
+  int32_t rand_on = rand(); // initialize with a random value
   int32_t ro = rand_on;
   if(dev & DRAW_PEOPLE_LAYER)
   {
@@ -2353,8 +2353,8 @@ int main(int argc, char *argv[])
         set_save_filename_prefix(getenv("ABUSE_SAVE_PATH"));
 #endif
 
-    jrand_init();
-    jrand(); // so compiler doesn't complain
+//    jrand_init();
+    rand(); // so compiler doesn't complain
 
     set_spec_main_file("abuse.spe");
     check_for_lisp(argc, argv);

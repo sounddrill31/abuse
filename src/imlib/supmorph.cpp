@@ -345,7 +345,7 @@ int smorph_player::show(image *screen, int x, int y, ColorFilter *fil, palette *
 main(int argc, char **argv)
 {
   image_init();
-  jrand_init();
+  //jrand_init();
   FILE *fp=fopen("art/mrphmask.spe","rb");
   spec_directory sd(fp);
   image *h1=new image(sd.find("20 h"),fp),
