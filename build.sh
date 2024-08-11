@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if ! command -v emcc &> /dev/null; then
+  bash ~/emsdk/setupenv.sh
+fi
+
 # Create a build directory for Emscripten
 mkdir -p build_emscripten
 cd build_emscripten
