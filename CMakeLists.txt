@@ -14,6 +14,9 @@ if(EMSCRIPTEN)
   set(USE_SDL2_MIXER ON)
   set(CMAKE_EXECUTABLE_SUFFIX ".html")
   
+  message("EMSCRIPTEN_ROOT_PATH: ${EMSCRIPTEN_ROOT_PATH}")
+  include_directories(${EMSCRIPTEN_ROOT_PATH}/system/include)
+
   # Add Emscripten-specific SDL2 and SDL2_mixer configuration
   set(SDL2_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/system/include/SDL2")
   set(SDL2_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2.a")
@@ -68,13 +71,11 @@ else()
     set(ASSETDIR "share/games/abuse")
     # Only define this for ports that actually use it
     add_definitions(-DASSETDIR="${CMAKE_INSTALL_PREFIX}/${ASSETDIR}")
+    
+    # Also include emscripten
+    message("EMSCRIPTEN_ROOT_PATH: ${EMSCRIPTEN_ROOT_PATH}")
+    include_directories(${EMSCRIPTEN_ROOT_PATH}/system/include)
 endif()
-
-if(NOT DEFINED EMSCRIPTEN_ROOT_PATH)
-    message(FATAL_ERROR "EMSCRIPTEN_ROOT_PATH is not set. Please set it when calling CMake.")
-endif()
-
-include_directories(${EMSCRIPTEN_ROOT_PATH}/system/include)
 
 add_definitions(-DPACKAGE_NAME="abuse")
 add_definitions(-DPACKAGE_VERSION="${abuse_VERSION}")

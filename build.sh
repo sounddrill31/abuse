@@ -12,10 +12,11 @@ echo "Starting build"
 mkdir -p ../build
 mkdir -p ../install
 
+export EmscriptenRoot=$(dirname $(whereis emcc | cut -d' ' -f2))""
 echo "Configuring Makefiles"
 emcmake cmake -DCMAKE_INSTALL_PREFIX:PATH=../install \
     -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake \
-    -DEMSCRIPTEN_ROOT_PATH=$EMSCRIPTEN_ROOT_PATH \
+    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
     .
 
 echo "Building"
@@ -24,6 +25,6 @@ emmake make install
 
 echo "Assembling html"
 cd ../build
-emcc ../abuse/*.o -o index.html
+#emcc ../abuse/*.o -o index.html
 
 echo "Script complete."
