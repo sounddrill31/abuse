@@ -48,8 +48,8 @@ keys_struct keys;
 
 extern int xres, yres;
 static unsigned int scale;
-char ASSETDIR[18] = "share/games/abuse";
-char PACKAGE_NAME[9] = "AbuseWeb";
+//char ASSETDIR[18] = "data";
+//char PACKAGE_NAME[9] = "AbuseWeb";
 //
 // Display help
 //
@@ -375,7 +375,6 @@ void setup( int argc, char **argv )
     scale                    = 2;    // Default scale amount
 
     // Display our name and version
-    char PACKAGE_VERSION[4] = "0.9"; // Hack: Hardcode version
     printf( "%s %s\n", PACKAGE_NAME, PACKAGE_VERSION );
 
     // Initialize SDL with video and audio support
