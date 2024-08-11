@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 if ! command -v emcc &> /dev/null; then
   bash setupenv.sh
   source ~/emsdk/emsdk_env.sh
@@ -9,8 +11,19 @@ echo "Starting build"
 
 mkdir -p ../build
 mkdir -p ../install
-emcmake cmake -DCMAKE_INSTALL_PREFIX:PATH=../install -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake .
 
-emcmake make
+echo "Configuring Makefiles"
+emcmake cmake -DCMAKE_INSTALL_PREFIX:PATH=../install \
+    -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake \
+    -DEMSCRIPTEN_ROOT_PATH=$EMSCRIPTEN_ROOT_PATH \
+    .
 
-echo "Compilation complete."
+echo "Building"
+emmake make
+emmake make install
+
+echo "Assembling html"
+cd ../build
+emcc ../abuse/*.o -o index.html
+
+echo "Script complete."

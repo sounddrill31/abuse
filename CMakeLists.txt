@@ -70,6 +70,12 @@ else()
     add_definitions(-DASSETDIR="${CMAKE_INSTALL_PREFIX}/${ASSETDIR}")
 endif()
 
+if(NOT DEFINED EMSCRIPTEN_ROOT_PATH)
+    message(FATAL_ERROR "EMSCRIPTEN_ROOT_PATH is not set. Please set it when calling CMake.")
+endif()
+
+include_directories(${EMSCRIPTEN_ROOT_PATH}/system/include)
+
 add_definitions(-DPACKAGE_NAME="abuse")
 add_definitions(-DPACKAGE_VERSION="${abuse_VERSION}")
 add_definitions(-DHAVE_CONFIG_H)
