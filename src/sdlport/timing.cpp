@@ -28,11 +28,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # if defined HAVE_SYS_TIME_H
-#  include <sys/time.h>
+	#include <sys/time.h>
 # endif
 # include <time.h>
 #endif
-
+#include <sys/time.h>
 #include "../imlib/timing.h"
 
 #ifdef __APPLE__

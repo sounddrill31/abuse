@@ -48,7 +48,8 @@ keys_struct keys;
 
 extern int xres, yres;
 static unsigned int scale;
-
+char ASSETDIR[18] = "share/games/abuse";
+char PACKAGE_NAME[9] = "AbuseWeb";
 //
 // Display help
 //
@@ -94,10 +95,10 @@ void createRCFile( char *rcfile )
         fputs( "; Abuse-SDL Configuration file\n\n", fd );
         fputs( "; Startup fullscreen\nfullscreen=1\n\n", fd );
         fputs( "; Force software renderer\nsoftware=0\n\n", fd );
-#if !((defined __APPLE__) || (defined WIN32))
-        fputs( "; Location of the datafiles\ndatadir=", fd );
-        fputs( ASSETDIR "\n\n", fd );
-#endif
+//#if !((defined __APPLE__) || (defined WIN32))
+//        fputs( "; Location of the datafiles\ndatadir=", fd );
+//        fputs( ASSETDIR "\n\n", fd );
+//#endif
         fputs( "; Use mono audio only\nmono=0\n\n", fd );
         fputs( "; Grab the mouse to the window\ngrabmouse=0\n\n", fd );
         fputs( "; Set the scale factor\nscale=2\n\n", fd );
