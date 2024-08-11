@@ -19,7 +19,7 @@
 #include "../imlib/specs.h"
 #include "../imlib/image.h"
 #include "../imlib/pcxread.h"
-#include "crc.h"
+#include "../crc.h"
 
 static void Usage();
 
