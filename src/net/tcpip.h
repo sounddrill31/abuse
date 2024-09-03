@@ -45,7 +45,7 @@ typedef int socklen_t;
 #endif
 
 #include "sock.h"
-#include "isllist.h"
+#include "../isllist.h"
 
 extern fd_set master_set, master_write_set, read_set, exception_set, write_set;
 

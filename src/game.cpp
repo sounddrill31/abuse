@@ -96,7 +96,7 @@ extern uint8_t chatting_enabled;
 
 // Enable TCP/IP driver
 #if HAVE_NETWORK
-#include "tcpip.h"
+#include "net/tcpip.h"
 tcpip_protocol tcpip;
 #endif
 
@@ -2161,6 +2161,7 @@ void game_getter(char *st, int max)
 
 void show_startup()
 {
+    #undef PACKAGE_VERSION
     char PACKAGE_VERSION[4] = "0.9"; // Hack: Hardcode version
     dprintf("Abuse version %s\n", PACKAGE_VERSION);
 }

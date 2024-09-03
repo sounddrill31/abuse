@@ -25,7 +25,7 @@
 #include "netface.h"
 
 #if HAVE_NETWORK
-#   include "fileman.h"
+#   include "net/fileman.h"
 #endif
 #include "net/sock.h"
 #include "net/ghandler.h"

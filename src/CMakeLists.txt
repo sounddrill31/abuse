@@ -89,4 +89,4 @@ include_directories(
     ${SDL2_MIXER_INCLUDE_DIR}
 )
 
-set_target_properties(abuse PROPERTIES OUTPUT_NAME "abuse.html")
+# set_target_properties(abuse PROPERTIES OUTPUT_NAME "abuse.html")

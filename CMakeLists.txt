@@ -15,17 +15,25 @@ if(EMSCRIPTEN)
   set(CMAKE_EXECUTABLE_SUFFIX ".html")
   
   message("EMSCRIPTEN_ROOT_PATH: ${EMSCRIPTEN_ROOT_PATH}")
-  include_directories(${EMSCRIPTEN_ROOT_PATH}/system/include)
+  include_directories(${EMSCRIPTEN_ROOT_PATH}/cache/sysroot/include)
 
   # Add Emscripten-specific SDL2 and SDL2_mixer configuration
-  set(SDL2_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/system/include/SDL2")
-  set(SDL2_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2.a")
-  set(SDL2_MIXER_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/system/include/SDL2")
-  set(SDL2_MIXER_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2_mixer.a")
+  set(SDL2_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/cache/sysroot/include/SDL2")
+  #set(SDL2_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2.a")
+  set(SDL2_MIXER_INCLUDE_DIRS "${EMSCRIPTEN_ROOT}/cache/sysroot/include/SDL2")
+  #set(SDL2_MIXER_LIBRARY "${EMSCRIPTEN_ROOT}/system/lib/libSDL2_mixer.a")
   
   # Add Emscripten-specific compiler flags
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL=2")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL_MIXER=2")
+
+  # Build Hacks
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-register")
+
+  set(CMAKE_FIND_LIBRARY_SUFFIXES ".wasm")
+    find_package(SDL2 REQUIRED)
+    find_package(SDL2_mixer REQUIRED)
+
 endif()
 
 if (WIN32)
@@ -74,7 +82,7 @@ else()
     
     # Also include emscripten
     message("EMSCRIPTEN_ROOT_PATH: ${EMSCRIPTEN_ROOT_PATH}")
-    include_directories(${EMSCRIPTEN_ROOT_PATH}/system/include)
+    include_directories(${EMSCRIPTEN_ROOT_PATH}/cache/sysroot/include)
 endif()
 
 add_definitions(-DPACKAGE_NAME="abuse")
