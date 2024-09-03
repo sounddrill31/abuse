@@ -15,3 +15,5 @@ if ! command -v emcc &> /dev/null; then
 else
     echo "Emscripten is already installed, skipping..."
 fi
+
+sudo apt install libsdl2-dev libsdl2-mixer-dev -y

@@ -1,22 +1,20 @@
-#
+cmake_minimum_required(VERSION 3.10)
 
-# SUBDIRS = lisp net imlib sdlport
+project(abuse)
+
+set(CMAKE_SYSTEM_NAME "Emscripten")
+set(CMAKE_SYSTEM_VERSION "1")
+
+set(CMAKE_C_COMPILER "emcc")
+set(CMAKE_CXX_COMPILER "em++")
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -s WASM=1 -s ALLOW_MEMORY_GROWTH=1")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s WASM=1 -s ALLOW_MEMORY_GROWTH=1")
+
 add_subdirectory(lisp)
 add_subdirectory(net)
 add_subdirectory(imlib)
 add_subdirectory(sdlport)
-
-if (WIN32)
-    # FIXME: Where should this logic reside? Whatever, first generate the
-    # resource script...
-    get_filename_component(abuse_ICON_PATH ${CPACK_WIX_PRODUCT_ICON} ABSOLUTE)
-    configure_file(win32/resources.rc.in ${CMAKE_CURRENT_BINARY_DIR}/resources.rc ESCAPE_QUOTES NEWLINE_STYLE WIN32)
-    # And then include it
-    # FIXME: I think this means the build location can't have spaces
-    set(abuse_RESOURCE_FILES "${CMAKE_CURRENT_BINARY_DIR}/resources.rc")
-else()
-    set(abuse_RESOURCE_FILES "")
-endif()
 
 add_executable(abuse
     common.h
@@ -73,15 +71,7 @@ add_executable(abuse
     id.h netface.h isllist.h sbar.h
     nfserver.h
     ui/volumewindow.cpp ui/volumewindow.h
-    ${abuse_RESOURCE_FILES}
 )
-
-set_target_properties(abuse PROPERTIES MACOSX_BUNDLE true)
-# Note this doesn't install the icon, that's done later
-set_target_properties(abuse PROPERTIES MACOSX_BUNDLE_ICON_FILE "abuse")
-set_target_properties(abuse PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "Abuse")
-set_target_properties(abuse PROPERTIES MACOSX_BUNDLE_SHORT_VERSION_STRING "${abuse_VERSION}")
-set_target_properties(abuse PROPERTIES MACOSX_BUNDLE_BUNDLE_VERSION "${abuse_VERSION}")
 
 target_link_libraries(abuse lisp)
 target_link_libraries(abuse sdlport)
@@ -89,41 +79,14 @@ target_link_libraries(abuse imlib)
 target_link_libraries(abuse net)
 target_link_libraries(abuse SDL2::SDL2)
 target_link_libraries(abuse SDL2_mixer::SDL2_mixer)
-if(OPENGL_FOUND)
-    target_link_libraries(abuse ${OPENGL_LIBRARIES})
-endif(OPENGL_FOUND)
-
-if(APPLE)
-    # Link CoreFoundation
-    target_link_libraries(abuse "-framework CoreFoundation")
-endif()
-
-add_executable(abuse-tool tool/abuse-tool.cpp crc.cpp crc.h)
-
-target_link_libraries(abuse-tool imlib)
 
 include_directories(
-    ${abuse_SOURCE_DIR}/src
-    ${abuse_SOURCE_DIR}/src/lisp
-    ${abuse_SOURCE_DIR}/src/imlib
-    ${abuse_SOURCE_DIR}/src/net
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/lisp
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/imlib
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/net
     ${SDL2_INCLUDE_DIR}
     ${SDL2_MIXER_INCLUDE_DIR}
 )
-if(WIN32)
-    # Under Windows, throw them into the root
-    install(TARGETS abuse abuse-tool
-        RUNTIME DESTINATION "."
-        LIBRARY DESTINATION ".")
-    install(FILES $<TARGET_FILE:SDL2::SDL2> DESTINATION ".")
-    install(FILES $<TARGET_FILE:SDL2_mixer::SDL2_mixer> DESTINATION ".")
-else()
-    # Under Linux, we want the tools in bin
-    install(TARGETS abuse abuse-tool RUNTIME DESTINATION bin
-    BUNDLE DESTINATION "${CMAKE_INSTALL_PREFIX}")
-    if(APPLE)
-        # macOS should probably include SDL rather than dynamically link them like Linux does
-        # Add icon
-        install(FILES "../macOS/abuse.icns" DESTINATION "${CMAKE_INSTALL_PREFIX}/abuse.app/Contents/Resources")
-    endif()
-endif()
+
+set_target_properties(abuse PROPERTIES OUTPUT_NAME "abuse.html")
