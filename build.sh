@@ -34,8 +34,17 @@ echo "Configuring Makefiles"
 #    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
 #    .. --debug-output -DWASM=1 -DALLOW_MEMORY_GROWTH=1 -DCXXFLAGS=-Wno-c++11-narrowing
 
+#emcmake cmake -DCMAKE_BUILD_TYPE=Release -DEMSCRIPTEN=ON -DCMAKE_INSTALL_PREFIX:PATH=../install \
+#   -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cache/sysroot/include/Emscripten.cmake \
+#    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
+#    .. \
+#    --debug-output \
+#    -DWASM=1 \
+#    -DALLOW_MEMORY_GROWTH=1 \
+#    -DCXXFLAGS=-Wno-c++11-narrowing -DCXXFLAGS+=-Wregister
+
 emcmake cmake -DCMAKE_BUILD_TYPE=Release -DEMSCRIPTEN=ON -DCMAKE_INSTALL_PREFIX:PATH=../install \
-    -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cache/sysroot/include/Emscripten.cmake \
+    -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake \
     -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
     .. \
     --debug-output \

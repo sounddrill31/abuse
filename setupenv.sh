@@ -16,4 +16,5 @@ else
     echo "Emscripten is already installed, skipping..."
 fi
 
+sudo apt update
 sudo apt install libsdl2-dev libsdl2-mixer-dev -y
