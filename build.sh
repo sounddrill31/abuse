@@ -5,7 +5,11 @@ set -e
 if [ ! $(which emcc) ] ; then
     if [ -z ${EMSDK} ] ; then
         # This isn't docker
-        source setupenv.sh
+        if [ ! -d ~/emsdk ] ; then
+            source setupenv.sh
+        else
+            source ~/emsdk/emsdk_env.sh
+        fi
     else
         # This is inside docker
         EMSDK_QUIET=1 source ${EMSDK}/emsdk_env.sh
