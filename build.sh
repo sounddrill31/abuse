@@ -18,39 +18,12 @@ echo "Starting build"
 cd $(dirname $(readlink -f $0))
 mkdir -p build_emscripten
 mkdir -p install
-cd build_emscripten
+cd build
 
 export EmscriptenRoot=$(dirname $(whereis emcc | cut -d' ' -f2))""
 echo "Configuring Makefiles"
-#emcmake cmake -DCMAKE_INSTALL_PREFIX:PATH=../install \
-#    -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake \
-#    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
-#    ..
 
-# cache/sysroot/include 
-
-#emcmake cmake -DCMAKE_BUILD_TYPE=Release -DEMSCRIPTEN=ON -DCMAKE_INSTALL_PREFIX:PATH=../install \
-#    -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake \
-#    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
-#    .. --debug-output -DWASM=1 -DALLOW_MEMORY_GROWTH=1 -DCXXFLAGS=-Wno-c++11-narrowing
-
-#emcmake cmake -DCMAKE_BUILD_TYPE=Release -DEMSCRIPTEN=ON -DCMAKE_INSTALL_PREFIX:PATH=../install \
-#   -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cache/sysroot/include/Emscripten.cmake \
-#    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
-#    .. \
-#    --debug-output \
-#    -DWASM=1 \
-#    -DALLOW_MEMORY_GROWTH=1 \
-#    -DCXXFLAGS=-Wno-c++11-narrowing -DCXXFLAGS+=-Wregister
-
-emcmake cmake -DCMAKE_BUILD_TYPE=Release -DEMSCRIPTEN=ON -DCMAKE_INSTALL_PREFIX:PATH=../install \
-    -DCMAKE_TOOLCHAIN_FILE=$EmscriptenRoot/cmake/Modules/Platform/Emscripten.cmake \
-    -DEMSCRIPTEN_ROOT_PATH=$EmscriptenRoot \
-    .. \
-    --debug-output \
-    -DWASM=1 \
-    -DALLOW_MEMORY_GROWTH=1 \
-    -DCXXFLAGS=-Wno-c++11-narrowing -DCXXFLAGS+=-Wregister
+emcmake cmake -DCMAKE_INSTALL_PREFIX:PATH=../install ..
 
 echo "Building"
 cd ..
